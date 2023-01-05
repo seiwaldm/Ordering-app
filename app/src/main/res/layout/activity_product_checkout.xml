@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:padding="20dp"
                 android:layout_height="match_parent"
-                android:scr="@drawable/leberkaese"/>
+                android:src="@drawable/leberkaese"/>
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
