@@ -7,21 +7,21 @@
     android:background="@color/mycolor"
     tools:context=".MainActivity">
 
-   <com.google.android.material.appbar.AppBarLayout
-       android:id="@+id/menu_appbar"
-       android:layout_width="match_parent"
-       app:elevation="0dp"
-       app:layout_constraintTop_toTopOf="parent"
-       android:layout_height="wrap_content">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/menu_appbar"
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
 
-       <com.google.android.material.appbar.MaterialToolbar
-           android:layout_width="match_parent"
-           app:navigationIcon="@drawable/ic_baseline_menu_24"
-           app:menu="@menu/top_menu"
-           android:layout_height="match_parent"/>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/top_menu"
+            app:navigationIcon="@drawable/ic_baseline_menu_24" />
 
     </com.google.android.material.appbar.AppBarLayout>
-    
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,16 +62,50 @@
                     android:text="Trinken">
 
 
-                </com.google.android.material.chip.Chip>
-              </com.google.android.material.chip.ChipGroup>
-            </LinearLayout>
-         </HorizontalScrollView>
 
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/main_recycler"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-app:layout_constraintTop_toBottomOf="@+id/chips_hscroll"
-    app:layout_constraintBottom_toBottomOf="parent"/>
+                </com.google.android.material.chip.Chip>
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <!--  This ImageView is used to show the dog images to the user  -->
+
+    <!--  This Button is used for making a new HTTP request for fetching new dog image  -->
+    <ImageView
+        android:id="@+id/dogImageView"
+        android:layout_width="234dp"
+        android:layout_height="278dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/nextDogButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/nextDogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Dog"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="254dp"
+        android:layout_height="313dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chips_hscroll"
+        app:layout_constraintVertical_bias="0.167"
+        tools:layout_editor_absoluteX="3dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
